@@ -43,7 +43,7 @@ html {
 }
 /*==Text Effects==*/
 #dynamic-text {
-    color: #8a0012;
+    color: #03fcdf;
     font-weight: bold;
     display: inline-block;
     text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red;
@@ -52,7 +52,7 @@ html {
 
 .cursor {
     display: inline-block;
-    color: red;
+    color: #fc5203;
     font-weight: bold;  
     animation: blink 0.8s steps(2) infinite;
 }
@@ -73,6 +73,23 @@ html {
         text-shadow: 0 0 3px red, 0 0 6px red, 0 0 9px red, 0 0 12px red, 0 0 15px red, 0 0 18px red, 0 0 21px red;
     }
 }
+/* Waving Hand effect */
+
+.greeting-container {
+    display: inline-flex; /* Aligns "Hi," and the animation horizontally */
+    align-items: center; /* Centers vertically */
+    gap: 5px; /* Space between text and animation */
+}
+
+#waving-hand {
+    width: 80px; /* Adjust the size of the waving hand animation */
+    height: 80px;
+}
+
+
+
+
+
 
 body {
   margin: var(--header-height) 0 0 0;
@@ -229,7 +246,7 @@ img {
 }
 .home__social {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;   
 }
 .home__social-icon {
   width: max-content;

@@ -25,6 +25,14 @@ function eraseEffect() {
         setTimeout(typeEffect, 1000); // Pause before re-typing
     }
 }
+// Waving Hand Effect
+lottie.loadAnimation({
+            container: document.getElementById('waving-hand'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b/lottie.json'
+        });
 
 window.onload = typeEffect;
 
