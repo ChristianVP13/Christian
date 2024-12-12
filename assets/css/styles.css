@@ -226,45 +226,59 @@ img {
 
 /*===== HOME =====*/
 .home {
-  margin-top: 10rem;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   row-gap: 5rem;
-  padding: 4rem 0 5rem;
+  padding: 4rem 1rem 5rem; /* Added padding to ensure proper spacing on smaller screens */
 }
+
 .home__data {
   align-self: center;
+  text-align: center;
 }
+
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
 }
+
 .home__title-color {
   color: var(--first-color);
 }
+
 .home__social {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack social icons vertically */
+  align-items: center;
+  row-gap: var(--mb-2); /* Adjusted for consistent spacing */
 }
+
 .home__social-icon {
   width: max-content;
-  margin-bottom: var(--mb-2);
   font-size: 4rem;
   color: var(--second-color);
 }
+
 .home__social-icon:hover {
   color: var(--first-color);
 }
+
 .home__img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 260px;
+  position: relative; /* Removed absolute positioning for better stacking */
+  width: auto; /* Makes the image responsive */
+  max-width: 768px; /* Ensures it doesn't exceed a reasonable size */
+  margin-top: auto; /* Adds spacing below other content */
+  padding: auto;
 }
+
 .home__blob {
   fill: var(--first-color);
 }
+
 .home__blob-img {
-  width: 360px;
+  width: auto; /* Makes the blob image responsive */
+  max-width: 768px; /* Ensures it fits within the screen */
 }
 
 /*BUTTONS*/
@@ -285,7 +299,7 @@ img {
 
 /* ===== ARTICLES =====*/
 .articles__container {
-  border: 1px solid #fff;
+  border: 1px solid #474747;
   border-radius: 1rem;
   row-gap: 2rem;
   text-align: center;
@@ -453,31 +467,39 @@ img {
 }
 
 /* ===== MEDIA QUERIES=====*/
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) { 
   .home {
     row-gap: 2rem;
+    align-items: center;
   }
   .home__img {
-    width: 200px;
+    width: auto; /* Let the image resize automatically */
+    height: auto;
+    max-width: 100%; /* Prevent it from overflowing its container */
+    max-height: 100%;
   }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
+  .home__data {
+    display: block; /* Ensure it's visible */
+  }
   .home {
     padding: 4rem 0 2rem;
   }
   .home__social {
-    padding-top: 0;
-    padding-bottom: 2.5rem;
+    padding-bottom: 10rem;
     flex-direction: row;
-    align-self: flex-end;
+    align-self: center;
   }
   .home__social-icon {
     margin-bottom: 0;
     margin-right: var(--mb-4);
   }
   .home__img {
-    width: 300px;
-    bottom: 25%;
+    width: auto; /* Let the image resize automatically */
+    height: auto;
+    max-width: 100%; /* Prevent it from overflowing its container */
+    max-height: 100%;
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
